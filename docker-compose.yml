@@ -1,10 +1,10 @@
-version: '3.7'
+version: '3.8'
 services:
   pocketbase:
     build:
       context: .
       args:
-        - VERSION=0.22.20 # <--------- Set the Pocketbase version here. It will be downloaded from their GitHub repo
+        - VERSION=0.22.21 # <--------- Set the Pocketbase version here. It will be downloaded from their GitHub repo
     container_name: pocketbase
     restart: unless-stopped
     command:
