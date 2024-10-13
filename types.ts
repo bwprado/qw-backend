@@ -1,4 +1,4 @@
-export interface Root {
+export interface Match {
   version: number
   date: string
   map: string
@@ -14,6 +14,7 @@ export interface Root {
   teams: string[]
   players: Player[]
   parsed_names: Record<string, string>
+  parsed_teams: Record<string, string>
 }
 
 export interface Player {
