@@ -8,4 +8,5 @@ cronAdd('find_matches', '*/1 * * * *', () => {
 
     const test = demos.split('\n')
     $app.logger().info(test)
+    $app
 })
