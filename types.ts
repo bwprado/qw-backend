@@ -13,6 +13,9 @@ export interface ParsedMatch {
   demo: string
   teams: string[]
   players: Player[]
+  parsed_names?: Record<string, string>
+  parsed_teams?: Record<string, string>
+  unicode_names?: Record<string, string>
 }
 export interface Match {
   version: number
@@ -31,6 +34,7 @@ export interface Match {
   players: Player[]
   parsed_names: Record<string, string>
   parsed_teams: Record<string, string>
+  unicode_names: Record<string, string>
 }
 
 export interface Player {

@@ -52,3 +52,55 @@ export const replaceParsedStrings = (data: Match) => {
     })
   }
 }
+
+export const replaceUnicodeStrings = (data: Match) => {
+  const { unicode_names, unicode_teams } = data
+  return {
+    ...data,
+    teams: data.teams.map((team) => data.parsed_teams[team]),
+    players: data.players.map((player) => {
+      return {
+        ...player,
+        name: parseName(unicode_names[player.name]),
+        team: parseName(unicode_teams[player.team])
+      }
+    })
+  }
+}
+
+export function parseName(name: string) {
+  const charMap: string[][] = [
+    ['•', '', '', '', '', '•', '', '', '', '', '', '', '>', '>', '•', '•'],
+    ['[', ']', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '•', '-', '-', '-'],
+    [' ', '!', '"', '#', '$', '%', '&', "'", '(', ')', '*', '+', ',', '-', '.', '/'],
+    ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', ':', ';', '<', '=', '>', '?'],
+    ['@', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O'],
+    ['P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', '[', '\\', ']', '^', '_'],
+    ["'", 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O'],
+    ['P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', '{', '|', '}', '~', ' '],
+    ['(', '=', ')', '.', '.', '.', '.', '.', '.', '.', '.', '.', '>', '>', '•', '•'],
+    ['[', ']', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '•', '-', '-', '-'],
+    [' ', '!', '"', '#', '$', '%', '&', "'", '(', ')', '*', '+', ',', '-', '.', '/'],
+    ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', ':', ';', '<', '=', '>', '?'],
+    ['@', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O'],
+    ['P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', '[', '\\', ']', '^', '_'],
+    ['`', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o'],
+    ['p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '{', '|', '}', '~', ' ']
+  ]
+
+  let nick = ''
+  const codePoints = name.match(/\\u[0-9a-fA-F]{4}/g) || []
+
+  for (const codePoint of codePoints) {
+    const charCode = parseInt(codePoint.slice(2), 16)
+    if (charCode < 128) {
+      nick += String.fromCharCode(charCode)
+    } else {
+      const row = (charCode >> 4) & 0xf
+      const column = charCode & 0xf
+      nick += charMap[row][column]
+    }
+  }
+
+  return nick
+}

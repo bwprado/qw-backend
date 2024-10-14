@@ -1,7 +1,7 @@
-import { ChromaClient } from 'npm:chromadb'
-import _ from 'npm:lodash'
-import { replaceParsedStrings } from './utils/parsers.ts'
 import type { ParsedMatch } from './types.ts'
+
+import { ChromaClient } from 'npm:chromadb'
+import { replaceUnicodeStrings } from './utils/parsers.ts'
 
 const URLS = ['http://quad.quakeworld.com.br:28000']
 const ENDPOINT = {
@@ -11,23 +11,34 @@ const ENDPOINT = {
 
 const client = new ChromaClient()
 
+async function saveErrorLog(error: string, origin: string) {
+  try {
+    const timestamp = new Date().toISOString()
+    const logEntry = `${timestamp}: ${error} - ${origin}\n`
+    console.error(logEntry)
+    await Deno.writeTextFile('./error.log', logEntry, { append: true })
+  } catch (error) {
+    console.error('Error saving error log:', error)
+  }
+}
+
 async function getDemoFilenames(url: string) {
   const response = await fetch(url + ENDPOINT.DEMOS_LIST)
 
   if (!response.ok) {
-    console.error('Failed to fetch demos list')
+    await saveErrorLog('Failed to fetch demos list', url)
     return { error: 'Failed to fetch demos list' }
   }
 
   const data = await response.text()
 
   if (!data) {
-    console.error('No demos list found')
+    await saveErrorLog('No demos list found', url)
     return { error: 'No demos list found' }
   }
 
   if (!data.trim().length) {
-    console.error('Demos list is empty')
+    await saveErrorLog('Demos list is empty', url)
     return { error: 'Demos list is empty' }
   }
 
@@ -40,28 +51,28 @@ async function getDemoFile(url: string, filename: string) {
     const response = await fetch(url + ENDPOINT.DEMO + filename)
 
     if (!response.ok) {
-      console.error('Failed to fetch demo')
+      await saveErrorLog('Failed to fetch demo', url)
       return { data: null, error: 'Failed to fetch demo' }
     }
 
     const data = await response.arrayBuffer()
 
     return { data: new Uint8Array(data), error: null }
-  } catch (error) {
-    console.error(error)
+  } catch (_) {
+    await saveErrorLog('Failed to fetch demo', url)
     return { data: null, error: 'Failed to fetch demo' }
   }
 }
 
-function saveDemo(filename: string, demo: Uint8Array) {
+async function saveDemo(filename: string, demo: Uint8Array) {
   try {
     if (!filename) return { data: null, error: 'No filename provided' }
 
     console.log(`Saving ${filename}...`)
     const file = Deno.writeFileSync(filename, demo)
     return { data: file, error: null }
-  } catch (error) {
-    console.error(error)
+  } catch (_) {
+    await saveErrorLog('Failed to save demo', filename)
     return { data: null, error: 'Failed to save demo' }
   }
 }
@@ -87,7 +98,7 @@ async function parseKTXStats(filename: string) {
 
   const file = await Deno.readTextFile(filename + '.ktxstats.json')
   const data = JSON.parse(file)
-  const parsed = replaceParsedStrings(data)
+  const parsed = replaceUnicodeStrings(data)
   await Deno.writeTextFile(`./stats/${parsed.demo}.json`, JSON.stringify(parsed, null, 2))
   await Deno.remove(filename + '.ktxstats.json')
 
@@ -147,15 +158,15 @@ export async function main() {
       const { data: demo, error } = await getDemoFile(url, demoFilename)
 
       if (error || !demo) {
-        console.error(error)
+        await saveErrorLog(error, url)
         continue
       }
       const filename = `./demos/stats_${index}`
 
-      const { error: saveError } = saveDemo(filename + '.mvd', demo)
+      const { error: saveError } = await saveDemo(filename + '.mvd', demo)
 
       if (saveError) {
-        console.error(saveError)
+        await saveErrorLog(saveError, url)
         continue
       }
 
@@ -163,13 +174,15 @@ export async function main() {
       const { data: parsed, error: parseError } = await parseKTXStats(filename)
 
       if (parseError || !parsed) {
-        console.error(parseError)
+        await saveErrorLog(parseError, url)
         continue
       }
 
       await addToChromaDB(parsed)
     }
   }
+
+  await client.reset()
 
   const { data: queryResults, error } = await queryChromaDB('cova')
 

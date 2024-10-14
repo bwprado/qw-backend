@@ -917,3 +917,497 @@ chromadb.db.base.UniqueConstraintError: Collection nicknames already exists
 [33mWARNING[0m:  [14-10-2024 13:05:03] Add of existing embedding ID: aminhaer_gdq
 [33mWARNING[0m:  [14-10-2024 13:05:03] Add of existing embedding ID: coveiro_gdq
 [32mINFO[0m:     [14-10-2024 13:05:03] ::1:64558 - "POST /api/v1/collections/8dde2862-2f7d-40d8-807e-37409406864c/add HTTP/1.1" 201
+[33mWARNING[0m:  [14-10-2024 19:54:12] chroma_server_nofile is not supported on Windows. chroma_server_nofile will not be set.
+[32mINFO[0m:     [14-10-2024 19:54:12] Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+[36mDEBUG[0m:    [14-10-2024 19:54:12] Starting component System
+[36mDEBUG[0m:    [14-10-2024 19:54:12] Starting component OpenTelemetryClient
+[36mDEBUG[0m:    [14-10-2024 19:54:12] Starting component SqliteDB
+[36mDEBUG[0m:    [14-10-2024 19:54:12] Starting component QuotaEnforcer
+[36mDEBUG[0m:    [14-10-2024 19:54:12] Starting component Posthog
+[36mDEBUG[0m:    [14-10-2024 19:54:12] Starting component SimpleRateLimitEnforcer
+[36mDEBUG[0m:    [14-10-2024 19:54:12] Starting component LocalSegmentManager
+[36mDEBUG[0m:    [14-10-2024 19:54:12] Starting component SegmentAPI
+[32mINFO[0m:     [14-10-2024 19:54:12] Started server process [[36m21376[0m]
+[32mINFO[0m:     [14-10-2024 19:54:12] Waiting for application startup.
+[32mINFO[0m:     [14-10-2024 19:54:12] Application startup complete.
+[32mINFO[0m:     [14-10-2024 19:54:12] Uvicorn running on [1mhttp://localhost:8000[0m (Press CTRL+C to quit)
+[32mINFO[0m:     [14-10-2024 19:56:48] ::1:52034 - "GET /api/v1/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [14-10-2024 19:56:48] ::1:52034 - "GET /api/v1/databases/default_database?tenant=default_tenant HTTP/1.1" 200
+[36mDEBUG[0m:    [14-10-2024 19:56:48] Collection nicknames already exists, returning existing collection.
+[32mINFO[0m:     [14-10-2024 19:56:48] ::1:52034 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[36mDEBUG[0m:    [14-10-2024 19:56:48] Starting component PersistentLocalHnswSegment
+[33mWARNING[0m:  [14-10-2024 19:56:48] Add of existing embedding ID: aminhaer_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:48] Add of existing embedding ID: coveiro_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:48] Add of existing embedding ID: aminhaer_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:48] Add of existing embedding ID: coveiro_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:48] Add of existing embedding ID: aminhaer_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:48] Add of existing embedding ID: coveiro_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:48] Add of existing embedding ID: aminhaer_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:48] Add of existing embedding ID: coveiro_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:48] Add of existing embedding ID: aminhaer_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:48] Add of existing embedding ID: coveiro_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:48] Add of existing embedding ID: aminhaer_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:48] Add of existing embedding ID: coveiro_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:48] Add of existing embedding ID: aminhaer_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:48] Add of existing embedding ID: coveiro_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:48] Add of existing embedding ID: coveiro_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:48] Add of existing embedding ID: aminhaer_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:48] Add of existing embedding ID: sinistro_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:48] Add of existing embedding ID: coveiro_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:48] Add of existing embedding ID: viper_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:48] Add of existing embedding ID: aminhaer_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:48] Add of existing embedding ID: sinistro_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:48] Add of existing embedding ID: coveiro_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:48] Add of existing embedding ID: viper_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:48] Add of existing embedding ID: aminhaer_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:48] Add of existing embedding ID: aminhaer_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:48] Add of existing embedding ID: coveiro_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:48] Add of existing embedding ID: aminhaer_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:48] Add of existing embedding ID: coveiro_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:48] Add of existing embedding ID: aminhaer_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:48] Add of existing embedding ID: coveiro_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:48] Add of existing embedding ID: aminhaer_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:48] Add of existing embedding ID: coveiro_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:48] Add of existing embedding ID: aminhaer_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:48] Add of existing embedding ID: coveiro_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:48] Add of existing embedding ID: aminhaer_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:48] Add of existing embedding ID: coveiro_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:48] Add of existing embedding ID: aminhaer_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:48] Add of existing embedding ID: coveiro_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:48] Add of existing embedding ID: sinistro_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:48] Add of existing embedding ID: coveiro_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:48] Add of existing embedding ID: viper_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:48] Add of existing embedding ID: aminhaer_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:48] Add of existing embedding ID: sinistro_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:48] Add of existing embedding ID: coveiro_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:48] Add of existing embedding ID: viper_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:48] Add of existing embedding ID: aminhaer_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:48] Add of existing embedding ID: aminhaer_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:48] Add of existing embedding ID: coveiro_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:48] Add of existing embedding ID: aminhaer_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:48] Add of existing embedding ID: coveiro_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:48] Add of existing embedding ID: aminhaer_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:48] Add of existing embedding ID: coveiro_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:48] Add of existing embedding ID: aminhaer_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:48] Add of existing embedding ID: coveiro_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:48] Add of existing embedding ID: aminhaer_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:48] Add of existing embedding ID: coveiro_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:48] Add of existing embedding ID: aminhaer_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:48] Add of existing embedding ID: coveiro_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:48] Add of existing embedding ID: aminhaer_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:48] Add of existing embedding ID: coveiro_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:48] Add of existing embedding ID: sinistro_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:48] Add of existing embedding ID: coveiro_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:48] Add of existing embedding ID: viper_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:48] Add of existing embedding ID: aminhaer_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:48] Add of existing embedding ID: sinistro_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:48] Add of existing embedding ID: coveiro_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:48] Add of existing embedding ID: viper_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:48] Add of existing embedding ID: aminhaer_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:48] Add of existing embedding ID: sinistro_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:48] Add of existing embedding ID: coveiro_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:48] Add of existing embedding ID: viper_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:48] Add of existing embedding ID: aminhaer_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:48] Add of existing embedding ID: aminhaer_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:48] Add of existing embedding ID: coveiro_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:48] Add of existing embedding ID: aminhaer_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:48] Add of existing embedding ID: coveiro_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:48] Add of existing embedding ID: aminhaer_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:49] Add of existing embedding ID: coveiro_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:49] Add of existing embedding ID: aminhaer_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:49] Add of existing embedding ID: coveiro_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:49] Add of existing embedding ID: aminhaer_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:49] Add of existing embedding ID: coveiro_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:49] Add of existing embedding ID: aminhaer_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:49] Add of existing embedding ID: coveiro_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:49] Add of existing embedding ID: aminhaer_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:49] Add of existing embedding ID: coveiro_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:49] Add of existing embedding ID: sinistro_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:49] Add of existing embedding ID: coveiro_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:49] Add of existing embedding ID: viper_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:49] Add of existing embedding ID: aminhaer_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:49] Add of existing embedding ID: sinistro_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:49] Add of existing embedding ID: coveiro_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:49] Add of existing embedding ID: viper_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:49] Add of existing embedding ID: aminhaer_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:49] Add of existing embedding ID: sinistro_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:49] Add of existing embedding ID: coveiro_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:49] Add of existing embedding ID: viper_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:49] Add of existing embedding ID: aminhaer_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:49] Add of existing embedding ID: aminhaer_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:49] Add of existing embedding ID: coveiro_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:49] Add of existing embedding ID: aminhaer_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:49] Add of existing embedding ID: coveiro_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:49] Add of existing embedding ID: aminhaer_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:49] Add of existing embedding ID: coveiro_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:49] Add of existing embedding ID: aminhaer_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:49] Add of existing embedding ID: coveiro_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:49] Add of existing embedding ID: aminhaer_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:49] Add of existing embedding ID: coveiro_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:49] Add of existing embedding ID: aminhaer_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:49] Add of existing embedding ID: coveiro_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:49] Add of existing embedding ID: aminhaer_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:49] Add of existing embedding ID: coveiro_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:49] Add of existing embedding ID: sinistro_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:49] Add of existing embedding ID: coveiro_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:49] Add of existing embedding ID: viper_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:49] Add of existing embedding ID: aminhaer_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:49] Add of existing embedding ID: sinistro_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:49] Add of existing embedding ID: coveiro_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:49] Add of existing embedding ID: viper_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:49] Add of existing embedding ID: aminhaer_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:49] Add of existing embedding ID: sinistro_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:49] Add of existing embedding ID: coveiro_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:49] Add of existing embedding ID: viper_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:49] Add of existing embedding ID: aminhaer_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:49] Add of existing embedding ID: aminhaer_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:49] Add of existing embedding ID: coveiro_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:49] Add of existing embedding ID: aminhaer_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:49] Add of existing embedding ID: coveiro_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:49] Add of existing embedding ID: aminhaer_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:49] Add of existing embedding ID: coveiro_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:49] Add of existing embedding ID: aminhaer_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:49] Add of existing embedding ID: coveiro_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:49] Add of existing embedding ID: aminhaer_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:49] Add of existing embedding ID: coveiro_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:49] Add of existing embedding ID: aminhaer_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:49] Add of existing embedding ID: coveiro_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:49] Add of existing embedding ID: aminhaer_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:49] Add of existing embedding ID: coveiro_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:49] Add of existing embedding ID: aminhaer_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:49] Add of existing embedding ID: coveiro_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:49] Add of existing embedding ID: aminhaer_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:49] Add of existing embedding ID: coveiro_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:49] Add of existing embedding ID: sinistro_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:49] Add of existing embedding ID: coveiro_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:49] Add of existing embedding ID: viper_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:49] Add of existing embedding ID: aminhaer_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:49] Add of existing embedding ID: sinistro_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:49] Add of existing embedding ID: coveiro_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:49] Add of existing embedding ID: viper_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:49] Add of existing embedding ID: aminhaer_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:49] Add of existing embedding ID: aminhaer_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:49] Add of existing embedding ID: coveiro_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:49] Add of existing embedding ID: aminhaer_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:49] Add of existing embedding ID: coveiro_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:49] Add of existing embedding ID: aminhaer_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:49] Add of existing embedding ID: coveiro_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:49] Add of existing embedding ID: aminhaer_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:49] Add of existing embedding ID: coveiro_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:49] Add of existing embedding ID: aminhaer_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:49] Add of existing embedding ID: coveiro_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:49] Add of existing embedding ID: aminhaer_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:49] Add of existing embedding ID: coveiro_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:49] Add of existing embedding ID: aminhaer_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:49] Add of existing embedding ID: coveiro_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:49] Add of existing embedding ID: aminhaer_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:49] Add of existing embedding ID: coveiro_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:49] Add of existing embedding ID: aminhaer_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:49] Add of existing embedding ID: coveiro_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:49] Add of existing embedding ID: aminhaer_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:49] Add of existing embedding ID: coveiro_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:49] Add of existing embedding ID: aminhaer_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:49] Add of existing embedding ID: coveiro_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:49] Add of existing embedding ID: aminhaer_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:49] Add of existing embedding ID: coveiro_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:49] Add of existing embedding ID: aminhaer_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:49] Add of existing embedding ID: coveiro_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:49] Add of existing embedding ID: sinistro_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:49] Add of existing embedding ID: coveiro_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:49] Add of existing embedding ID: viper_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:49] Add of existing embedding ID: aminhaer_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:49] Add of existing embedding ID: sinistro_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:49] Add of existing embedding ID: coveiro_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:49] Add of existing embedding ID: viper_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:49] Add of existing embedding ID: aminhaer_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:49] Add of existing embedding ID: sinistro_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:49] Add of existing embedding ID: coveiro_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:49] Add of existing embedding ID: viper_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:49] Add of existing embedding ID: aminhaer_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:49] Add of existing embedding ID: aminhaer_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:49] Add of existing embedding ID: coveiro_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:49] Add of existing embedding ID: aminhaer_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:49] Add of existing embedding ID: coveiro_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:49] Add of existing embedding ID: aminhaer_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:49] Add of existing embedding ID: coveiro_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:49] Add of existing embedding ID: aminhaer_gdq
+[33mWARNING[0m:  [14-10-2024 19:56:49] Add of existing embedding ID: coveiro_gdq
+[32mINFO[0m:     [14-10-2024 19:56:49] ::1:52034 - "POST /api/v1/collections/8dde2862-2f7d-40d8-807e-37409406864c/add HTTP/1.1" 201
+[36mDEBUG[0m:    [14-10-2024 19:56:52] Collection nicknames already exists, returning existing collection.
+[32mINFO[0m:     [14-10-2024 19:56:52] ::1:52034 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[33mWARNING[0m:  [14-10-2024 19:56:52] Insert of existing embedding ID: u0061MINHAER•gdq
+[33mWARNING[0m:  [14-10-2024 19:56:52] Insert of existing embedding ID: u0063OVEIRO•gdq
+[33mWARNING[0m:  [14-10-2024 19:56:52] Add of existing embedding ID: u0061MINHAER•gdq
+[33mWARNING[0m:  [14-10-2024 19:56:52] Add of existing embedding ID: u0063OVEIRO•gdq
+[32mINFO[0m:     [14-10-2024 19:56:52] ::1:52034 - "POST /api/v1/collections/8dde2862-2f7d-40d8-807e-37409406864c/add HTTP/1.1" 201
+[36mDEBUG[0m:    [14-10-2024 19:56:55] Collection nicknames already exists, returning existing collection.
+[32mINFO[0m:     [14-10-2024 19:56:55] ::1:52034 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[33mWARNING[0m:  [14-10-2024 19:56:55] Insert of existing embedding ID: u0061MINHAER•gdq
+[33mWARNING[0m:  [14-10-2024 19:56:55] Insert of existing embedding ID: u0063OVEIRO•gdq
+[33mWARNING[0m:  [14-10-2024 19:56:55] Add of existing embedding ID: u0061MINHAER•gdq
+[33mWARNING[0m:  [14-10-2024 19:56:55] Add of existing embedding ID: u0063OVEIRO•gdq
+[32mINFO[0m:     [14-10-2024 19:56:55] ::1:52034 - "POST /api/v1/collections/8dde2862-2f7d-40d8-807e-37409406864c/add HTTP/1.1" 201
+[36mDEBUG[0m:    [14-10-2024 19:56:59] Collection nicknames already exists, returning existing collection.
+[32mINFO[0m:     [14-10-2024 19:56:59] ::1:52034 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[33mWARNING[0m:  [14-10-2024 19:56:59] Insert of existing embedding ID: u0061MINHAER•gdq
+[33mWARNING[0m:  [14-10-2024 19:56:59] Insert of existing embedding ID: u0063OVEIRO•gdq
+[33mWARNING[0m:  [14-10-2024 19:56:59] Add of existing embedding ID: u0061MINHAER•gdq
+[33mWARNING[0m:  [14-10-2024 19:56:59] Add of existing embedding ID: u0063OVEIRO•gdq
+[32mINFO[0m:     [14-10-2024 19:56:59] ::1:52034 - "POST /api/v1/collections/8dde2862-2f7d-40d8-807e-37409406864c/add HTTP/1.1" 201
+[36mDEBUG[0m:    [14-10-2024 19:57:02] Collection nicknames already exists, returning existing collection.
+[32mINFO[0m:     [14-10-2024 19:57:02] ::1:52034 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[33mWARNING[0m:  [14-10-2024 19:57:02] Insert of existing embedding ID: u0061MINHAER•gdq
+[33mWARNING[0m:  [14-10-2024 19:57:02] Insert of existing embedding ID: u0063OVEIRO•gdq
+[33mWARNING[0m:  [14-10-2024 19:57:02] Add of existing embedding ID: u0061MINHAER•gdq
+[33mWARNING[0m:  [14-10-2024 19:57:02] Add of existing embedding ID: u0063OVEIRO•gdq
+[32mINFO[0m:     [14-10-2024 19:57:02] ::1:52034 - "POST /api/v1/collections/8dde2862-2f7d-40d8-807e-37409406864c/add HTTP/1.1" 201
+[36mDEBUG[0m:    [14-10-2024 19:57:05] Collection nicknames already exists, returning existing collection.
+[32mINFO[0m:     [14-10-2024 19:57:05] ::1:52034 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[33mWARNING[0m:  [14-10-2024 19:57:05] Insert of existing embedding ID: u0061MINHAER•gdq
+[33mWARNING[0m:  [14-10-2024 19:57:05] Insert of existing embedding ID: u0063OVEIRO•gdq
+[33mWARNING[0m:  [14-10-2024 19:57:05] Add of existing embedding ID: u0061MINHAER•gdq
+[33mWARNING[0m:  [14-10-2024 19:57:05] Add of existing embedding ID: u0063OVEIRO•gdq
+[32mINFO[0m:     [14-10-2024 19:57:05] ::1:52034 - "POST /api/v1/collections/8dde2862-2f7d-40d8-807e-37409406864c/add HTTP/1.1" 201
+[36mDEBUG[0m:    [14-10-2024 19:57:07] Collection nicknames already exists, returning existing collection.
+[32mINFO[0m:     [14-10-2024 19:57:07] ::1:52034 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[33mWARNING[0m:  [14-10-2024 19:57:07] Insert of existing embedding ID: u0061MINHAER•gdq
+[33mWARNING[0m:  [14-10-2024 19:57:07] Insert of existing embedding ID: u0063OVEIRO•gdq
+[33mWARNING[0m:  [14-10-2024 19:57:07] Add of existing embedding ID: u0061MINHAER•gdq
+[33mWARNING[0m:  [14-10-2024 19:57:07] Add of existing embedding ID: u0063OVEIRO•gdq
+[32mINFO[0m:     [14-10-2024 19:57:07] ::1:52034 - "POST /api/v1/collections/8dde2862-2f7d-40d8-807e-37409406864c/add HTTP/1.1" 201
+[36mDEBUG[0m:    [14-10-2024 19:57:15] Collection nicknames already exists, returning existing collection.
+[32mINFO[0m:     [14-10-2024 19:57:15] ::1:52034 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[33mWARNING[0m:  [14-10-2024 19:57:15] Insert of existing embedding ID: u0063OVEIRO•gdq
+[33mWARNING[0m:  [14-10-2024 19:57:15] Insert of existing embedding ID: u0061MINHAER•gdq
+[33mWARNING[0m:  [14-10-2024 19:57:15] Add of existing embedding ID: u0063OVEIRO•gdq
+[33mWARNING[0m:  [14-10-2024 19:57:15] Add of existing embedding ID: u0061MINHAER•gdq
+[32mINFO[0m:     [14-10-2024 19:57:15] ::1:52034 - "POST /api/v1/collections/8dde2862-2f7d-40d8-807e-37409406864c/add HTTP/1.1" 201
+[36mDEBUG[0m:    [14-10-2024 19:57:21] Collection nicknames already exists, returning existing collection.
+[32mINFO[0m:     [14-10-2024 19:57:21] ::1:52034 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[33mWARNING[0m:  [14-10-2024 19:57:21] Insert of existing embedding ID: u0073INISTRO•gdq
+[33mWARNING[0m:  [14-10-2024 19:57:21] Insert of existing embedding ID: u0063OVEIRO•gdq
+[33mWARNING[0m:  [14-10-2024 19:57:21] Insert of existing embedding ID: u0076IPER•gdq
+[33mWARNING[0m:  [14-10-2024 19:57:21] Insert of existing embedding ID: u0061MINHAER•gdq
+[33mWARNING[0m:  [14-10-2024 19:57:21] Add of existing embedding ID: u0073INISTRO•gdq
+[33mWARNING[0m:  [14-10-2024 19:57:21] Add of existing embedding ID: u0063OVEIRO•gdq
+[33mWARNING[0m:  [14-10-2024 19:57:21] Add of existing embedding ID: u0076IPER•gdq
+[33mWARNING[0m:  [14-10-2024 19:57:21] Add of existing embedding ID: u0061MINHAER•gdq
+[32mINFO[0m:     [14-10-2024 19:57:21] ::1:52034 - "POST /api/v1/collections/8dde2862-2f7d-40d8-807e-37409406864c/add HTTP/1.1" 201
+[36mDEBUG[0m:    [14-10-2024 19:57:27] Collection nicknames already exists, returning existing collection.
+[32mINFO[0m:     [14-10-2024 19:57:27] ::1:52034 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[36mDEBUG[0m:    [14-10-2024 19:57:27] Collection nicknames already exists, returning existing collection.
+[32mINFO[0m:     [14-10-2024 19:57:27] ::1:52034 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[33mWARNING[0m:  [14-10-2024 19:57:27] Insert of existing embedding ID: u0073INISTRO•gdq
+[33mWARNING[0m:  [14-10-2024 19:57:27] Insert of existing embedding ID: u0063OVEIRO•gdq
+[33mWARNING[0m:  [14-10-2024 19:57:27] Insert of existing embedding ID: u0076IPER•gdq
+[33mWARNING[0m:  [14-10-2024 19:57:27] Insert of existing embedding ID: u0061MINHAER•gdq
+[33mWARNING[0m:  [14-10-2024 19:57:27] Add of existing embedding ID: u0073INISTRO•gdq
+[33mWARNING[0m:  [14-10-2024 19:57:27] Add of existing embedding ID: u0063OVEIRO•gdq
+[33mWARNING[0m:  [14-10-2024 19:57:27] Add of existing embedding ID: u0076IPER•gdq
+[33mWARNING[0m:  [14-10-2024 19:57:27] Add of existing embedding ID: u0061MINHAER•gdq
+[32mINFO[0m:     [14-10-2024 19:57:27] ::1:52034 - "POST /api/v1/collections/8dde2862-2f7d-40d8-807e-37409406864c/add HTTP/1.1" 201
+[33mWARNING[0m:  [14-10-2024 19:57:27] Number of requested results 10 is greater than number of elements in index 8, updating n_results = 8
+[32mINFO[0m:     [14-10-2024 19:57:27] ::1:52034 - "POST /api/v1/collections/8dde2862-2f7d-40d8-807e-37409406864c/query HTTP/1.1" 200
+[32mINFO[0m:     [14-10-2024 19:57:46] ::1:52081 - "GET /api/v1/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [14-10-2024 19:57:46] ::1:52081 - "GET /api/v1/databases/default_database?tenant=default_tenant HTTP/1.1" 200
+[36mDEBUG[0m:    [14-10-2024 19:57:46] Collection nicknames already exists, returning existing collection.
+[32mINFO[0m:     [14-10-2024 19:57:46] ::1:52081 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[32mINFO[0m:     [14-10-2024 19:57:46] ::1:52081 - "POST /api/v1/collections/8dde2862-2f7d-40d8-807e-37409406864c/add HTTP/1.1" 201
+[36mDEBUG[0m:    [14-10-2024 19:57:50] Collection nicknames already exists, returning existing collection.
+[32mINFO[0m:     [14-10-2024 19:57:50] ::1:52081 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[33mWARNING[0m:  [14-10-2024 19:57:50] Insert of existing embedding ID: AMINHAER•gdq
+[33mWARNING[0m:  [14-10-2024 19:57:50] Insert of existing embedding ID: COVEIRO•gdq
+[33mWARNING[0m:  [14-10-2024 19:57:50] Add of existing embedding ID: AMINHAER•gdq
+[33mWARNING[0m:  [14-10-2024 19:57:50] Add of existing embedding ID: COVEIRO•gdq
+[32mINFO[0m:     [14-10-2024 19:57:50] ::1:52081 - "POST /api/v1/collections/8dde2862-2f7d-40d8-807e-37409406864c/add HTTP/1.1" 201
+[36mDEBUG[0m:    [14-10-2024 19:57:53] Collection nicknames already exists, returning existing collection.
+[32mINFO[0m:     [14-10-2024 19:57:53] ::1:52081 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[33mWARNING[0m:  [14-10-2024 19:57:53] Insert of existing embedding ID: AMINHAER•gdq
+[33mWARNING[0m:  [14-10-2024 19:57:53] Insert of existing embedding ID: COVEIRO•gdq
+[33mWARNING[0m:  [14-10-2024 19:57:53] Add of existing embedding ID: AMINHAER•gdq
+[33mWARNING[0m:  [14-10-2024 19:57:53] Add of existing embedding ID: COVEIRO•gdq
+[32mINFO[0m:     [14-10-2024 19:57:53] ::1:52081 - "POST /api/v1/collections/8dde2862-2f7d-40d8-807e-37409406864c/add HTTP/1.1" 201
+[36mDEBUG[0m:    [14-10-2024 19:57:56] Collection nicknames already exists, returning existing collection.
+[32mINFO[0m:     [14-10-2024 19:57:56] ::1:52081 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[33mWARNING[0m:  [14-10-2024 19:57:57] Insert of existing embedding ID: AMINHAER•gdq
+[33mWARNING[0m:  [14-10-2024 19:57:57] Insert of existing embedding ID: COVEIRO•gdq
+[33mWARNING[0m:  [14-10-2024 19:57:57] Add of existing embedding ID: AMINHAER•gdq
+[33mWARNING[0m:  [14-10-2024 19:57:57] Add of existing embedding ID: COVEIRO•gdq
+[32mINFO[0m:     [14-10-2024 19:57:57] ::1:52081 - "POST /api/v1/collections/8dde2862-2f7d-40d8-807e-37409406864c/add HTTP/1.1" 201
+[36mDEBUG[0m:    [14-10-2024 19:58:00] Collection nicknames already exists, returning existing collection.
+[32mINFO[0m:     [14-10-2024 19:58:00] ::1:52081 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[33mWARNING[0m:  [14-10-2024 19:58:00] Insert of existing embedding ID: AMINHAER•gdq
+[33mWARNING[0m:  [14-10-2024 19:58:00] Insert of existing embedding ID: COVEIRO•gdq
+[33mWARNING[0m:  [14-10-2024 19:58:00] Add of existing embedding ID: AMINHAER•gdq
+[33mWARNING[0m:  [14-10-2024 19:58:00] Add of existing embedding ID: COVEIRO•gdq
+[32mINFO[0m:     [14-10-2024 19:58:00] ::1:52081 - "POST /api/v1/collections/8dde2862-2f7d-40d8-807e-37409406864c/add HTTP/1.1" 201
+[36mDEBUG[0m:    [14-10-2024 19:58:03] Collection nicknames already exists, returning existing collection.
+[32mINFO[0m:     [14-10-2024 19:58:03] ::1:52081 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[33mWARNING[0m:  [14-10-2024 19:58:03] Insert of existing embedding ID: AMINHAER•gdq
+[33mWARNING[0m:  [14-10-2024 19:58:03] Insert of existing embedding ID: COVEIRO•gdq
+[33mWARNING[0m:  [14-10-2024 19:58:03] Add of existing embedding ID: AMINHAER•gdq
+[33mWARNING[0m:  [14-10-2024 19:58:03] Add of existing embedding ID: COVEIRO•gdq
+[32mINFO[0m:     [14-10-2024 19:58:03] ::1:52081 - "POST /api/v1/collections/8dde2862-2f7d-40d8-807e-37409406864c/add HTTP/1.1" 201
+[36mDEBUG[0m:    [14-10-2024 19:58:05] Collection nicknames already exists, returning existing collection.
+[32mINFO[0m:     [14-10-2024 19:58:05] ::1:52081 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[33mWARNING[0m:  [14-10-2024 19:58:05] Insert of existing embedding ID: AMINHAER•gdq
+[33mWARNING[0m:  [14-10-2024 19:58:05] Insert of existing embedding ID: COVEIRO•gdq
+[33mWARNING[0m:  [14-10-2024 19:58:05] Add of existing embedding ID: AMINHAER•gdq
+[33mWARNING[0m:  [14-10-2024 19:58:05] Add of existing embedding ID: COVEIRO•gdq
+[32mINFO[0m:     [14-10-2024 19:58:05] ::1:52081 - "POST /api/v1/collections/8dde2862-2f7d-40d8-807e-37409406864c/add HTTP/1.1" 201
+[36mDEBUG[0m:    [14-10-2024 19:58:12] Collection nicknames already exists, returning existing collection.
+[32mINFO[0m:     [14-10-2024 19:58:12] ::1:52081 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[33mWARNING[0m:  [14-10-2024 19:58:13] Insert of existing embedding ID: COVEIRO•gdq
+[33mWARNING[0m:  [14-10-2024 19:58:13] Insert of existing embedding ID: AMINHAER•gdq
+[33mWARNING[0m:  [14-10-2024 19:58:13] Add of existing embedding ID: COVEIRO•gdq
+[33mWARNING[0m:  [14-10-2024 19:58:13] Add of existing embedding ID: AMINHAER•gdq
+[32mINFO[0m:     [14-10-2024 19:58:13] ::1:52081 - "POST /api/v1/collections/8dde2862-2f7d-40d8-807e-37409406864c/add HTTP/1.1" 201
+[36mDEBUG[0m:    [14-10-2024 19:58:24] Collection nicknames already exists, returning existing collection.
+[32mINFO[0m:     [14-10-2024 19:58:24] ::1:52081 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[33mWARNING[0m:  [14-10-2024 19:58:24] Insert of existing embedding ID: SINISTRO•gdq
+[33mWARNING[0m:  [14-10-2024 19:58:24] Insert of existing embedding ID: COVEIRO•gdq
+[33mWARNING[0m:  [14-10-2024 19:58:24] Insert of existing embedding ID: VIPER•gdq
+[33mWARNING[0m:  [14-10-2024 19:58:24] Insert of existing embedding ID: AMINHAER•gdq
+[33mWARNING[0m:  [14-10-2024 19:58:24] Add of existing embedding ID: SINISTRO•gdq
+[33mWARNING[0m:  [14-10-2024 19:58:24] Add of existing embedding ID: COVEIRO•gdq
+[33mWARNING[0m:  [14-10-2024 19:58:24] Add of existing embedding ID: VIPER•gdq
+[33mWARNING[0m:  [14-10-2024 19:58:24] Add of existing embedding ID: AMINHAER•gdq
+[32mINFO[0m:     [14-10-2024 19:58:24] ::1:52081 - "POST /api/v1/collections/8dde2862-2f7d-40d8-807e-37409406864c/add HTTP/1.1" 201
+[36mDEBUG[0m:    [14-10-2024 19:58:30] Collection nicknames already exists, returning existing collection.
+[32mINFO[0m:     [14-10-2024 19:58:30] ::1:52081 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[36mDEBUG[0m:    [14-10-2024 19:58:30] Collection nicknames already exists, returning existing collection.
+[32mINFO[0m:     [14-10-2024 19:58:30] ::1:52081 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[33mWARNING[0m:  [14-10-2024 19:58:30] Insert of existing embedding ID: SINISTRO•gdq
+[33mWARNING[0m:  [14-10-2024 19:58:30] Insert of existing embedding ID: COVEIRO•gdq
+[33mWARNING[0m:  [14-10-2024 19:58:30] Insert of existing embedding ID: VIPER•gdq
+[33mWARNING[0m:  [14-10-2024 19:58:30] Insert of existing embedding ID: AMINHAER•gdq
+[33mWARNING[0m:  [14-10-2024 19:58:30] Add of existing embedding ID: SINISTRO•gdq
+[33mWARNING[0m:  [14-10-2024 19:58:30] Add of existing embedding ID: COVEIRO•gdq
+[33mWARNING[0m:  [14-10-2024 19:58:30] Add of existing embedding ID: VIPER•gdq
+[33mWARNING[0m:  [14-10-2024 19:58:30] Add of existing embedding ID: AMINHAER•gdq
+[32mINFO[0m:     [14-10-2024 19:58:30] ::1:52081 - "POST /api/v1/collections/8dde2862-2f7d-40d8-807e-37409406864c/add HTTP/1.1" 201
+[32mINFO[0m:     [14-10-2024 19:58:30] ::1:52081 - "POST /api/v1/collections/8dde2862-2f7d-40d8-807e-37409406864c/query HTTP/1.1" 200
+[32mINFO[0m:     [14-10-2024 19:58:49] ::1:52124 - "GET /api/v1/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [14-10-2024 19:58:49] ::1:52124 - "GET /api/v1/databases/default_database?tenant=default_tenant HTTP/1.1" 200
+[36mDEBUG[0m:    [14-10-2024 19:58:49] Collection nicknames already exists, returning existing collection.
+[32mINFO[0m:     [14-10-2024 19:58:49] ::1:52124 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[33mWARNING[0m:  [14-10-2024 19:58:50] Insert of existing embedding ID: AMINHAER•gdq
+[33mWARNING[0m:  [14-10-2024 19:58:50] Insert of existing embedding ID: COVEIRO•gdq
+[33mWARNING[0m:  [14-10-2024 19:58:50] Add of existing embedding ID: AMINHAER•gdq
+[33mWARNING[0m:  [14-10-2024 19:58:50] Add of existing embedding ID: COVEIRO•gdq
+[32mINFO[0m:     [14-10-2024 19:58:50] ::1:52124 - "POST /api/v1/collections/8dde2862-2f7d-40d8-807e-37409406864c/add HTTP/1.1" 201
+[36mDEBUG[0m:    [14-10-2024 19:59:12] Collection nicknames already exists, returning existing collection.
+[32mINFO[0m:     [14-10-2024 19:59:12] ::1:52124 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[33mWARNING[0m:  [14-10-2024 19:59:12] Insert of existing embedding ID: AMINHAER•gdq
+[33mWARNING[0m:  [14-10-2024 19:59:12] Insert of existing embedding ID: COVEIRO•gdq
+[33mWARNING[0m:  [14-10-2024 19:59:12] Add of existing embedding ID: AMINHAER•gdq
+[33mWARNING[0m:  [14-10-2024 19:59:12] Add of existing embedding ID: COVEIRO•gdq
+[32mINFO[0m:     [14-10-2024 19:59:12] ::1:52124 - "POST /api/v1/collections/8dde2862-2f7d-40d8-807e-37409406864c/add HTTP/1.1" 201
+[36mDEBUG[0m:    [14-10-2024 19:59:16] Collection nicknames already exists, returning existing collection.
+[32mINFO[0m:     [14-10-2024 19:59:16] ::1:52124 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[33mWARNING[0m:  [14-10-2024 19:59:16] Insert of existing embedding ID: AMINHAER•gdq
+[33mWARNING[0m:  [14-10-2024 19:59:16] Insert of existing embedding ID: COVEIRO•gdq
+[33mWARNING[0m:  [14-10-2024 19:59:16] Add of existing embedding ID: AMINHAER•gdq
+[33mWARNING[0m:  [14-10-2024 19:59:16] Add of existing embedding ID: COVEIRO•gdq
+[32mINFO[0m:     [14-10-2024 19:59:16] ::1:52124 - "POST /api/v1/collections/8dde2862-2f7d-40d8-807e-37409406864c/add HTTP/1.1" 201
+[36mDEBUG[0m:    [14-10-2024 19:59:19] Collection nicknames already exists, returning existing collection.
+[32mINFO[0m:     [14-10-2024 19:59:19] ::1:52124 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[33mWARNING[0m:  [14-10-2024 19:59:19] Insert of existing embedding ID: AMINHAER•gdq
+[33mWARNING[0m:  [14-10-2024 19:59:19] Insert of existing embedding ID: COVEIRO•gdq
+[33mWARNING[0m:  [14-10-2024 19:59:19] Add of existing embedding ID: AMINHAER•gdq
+[33mWARNING[0m:  [14-10-2024 19:59:19] Add of existing embedding ID: COVEIRO•gdq
+[32mINFO[0m:     [14-10-2024 19:59:19] ::1:52124 - "POST /api/v1/collections/8dde2862-2f7d-40d8-807e-37409406864c/add HTTP/1.1" 201
+[36mDEBUG[0m:    [14-10-2024 19:59:24] Collection nicknames already exists, returning existing collection.
+[32mINFO[0m:     [14-10-2024 19:59:24] ::1:52124 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[33mWARNING[0m:  [14-10-2024 19:59:25] Insert of existing embedding ID: AMINHAER•gdq
+[33mWARNING[0m:  [14-10-2024 19:59:25] Insert of existing embedding ID: COVEIRO•gdq
+[33mWARNING[0m:  [14-10-2024 19:59:25] Add of existing embedding ID: AMINHAER•gdq
+[33mWARNING[0m:  [14-10-2024 19:59:25] Add of existing embedding ID: COVEIRO•gdq
+[32mINFO[0m:     [14-10-2024 19:59:25] ::1:52124 - "POST /api/v1/collections/8dde2862-2f7d-40d8-807e-37409406864c/add HTTP/1.1" 201
+[36mDEBUG[0m:    [14-10-2024 19:59:28] Collection nicknames already exists, returning existing collection.
+[32mINFO[0m:     [14-10-2024 19:59:28] ::1:52124 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[33mWARNING[0m:  [14-10-2024 19:59:28] Insert of existing embedding ID: AMINHAER•gdq
+[33mWARNING[0m:  [14-10-2024 19:59:28] Insert of existing embedding ID: COVEIRO•gdq
+[33mWARNING[0m:  [14-10-2024 19:59:28] Add of existing embedding ID: AMINHAER•gdq
+[33mWARNING[0m:  [14-10-2024 19:59:28] Add of existing embedding ID: COVEIRO•gdq
+[32mINFO[0m:     [14-10-2024 19:59:28] ::1:52124 - "POST /api/v1/collections/8dde2862-2f7d-40d8-807e-37409406864c/add HTTP/1.1" 201
+[36mDEBUG[0m:    [14-10-2024 19:59:30] Collection nicknames already exists, returning existing collection.
+[32mINFO[0m:     [14-10-2024 19:59:30] ::1:52124 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[33mWARNING[0m:  [14-10-2024 19:59:30] Insert of existing embedding ID: AMINHAER•gdq
+[33mWARNING[0m:  [14-10-2024 19:59:30] Insert of existing embedding ID: COVEIRO•gdq
+[33mWARNING[0m:  [14-10-2024 19:59:30] Add of existing embedding ID: AMINHAER•gdq
+[33mWARNING[0m:  [14-10-2024 19:59:30] Add of existing embedding ID: COVEIRO•gdq
+[32mINFO[0m:     [14-10-2024 19:59:30] ::1:52124 - "POST /api/v1/collections/8dde2862-2f7d-40d8-807e-37409406864c/add HTTP/1.1" 201
+[36mDEBUG[0m:    [14-10-2024 19:59:38] Collection nicknames already exists, returning existing collection.
+[32mINFO[0m:     [14-10-2024 19:59:38] ::1:52124 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[33mWARNING[0m:  [14-10-2024 19:59:38] Insert of existing embedding ID: SINISTRO•gdq
+[33mWARNING[0m:  [14-10-2024 19:59:38] Insert of existing embedding ID: COVEIRO•gdq
+[33mWARNING[0m:  [14-10-2024 19:59:38] Insert of existing embedding ID: VIPER•gdq
+[33mWARNING[0m:  [14-10-2024 19:59:38] Insert of existing embedding ID: AMINHAER•gdq
+[33mWARNING[0m:  [14-10-2024 19:59:38] Add of existing embedding ID: SINISTRO•gdq
+[33mWARNING[0m:  [14-10-2024 19:59:38] Add of existing embedding ID: COVEIRO•gdq
+[33mWARNING[0m:  [14-10-2024 19:59:38] Add of existing embedding ID: VIPER•gdq
+[33mWARNING[0m:  [14-10-2024 19:59:38] Add of existing embedding ID: AMINHAER•gdq
+[32mINFO[0m:     [14-10-2024 19:59:38] ::1:52124 - "POST /api/v1/collections/8dde2862-2f7d-40d8-807e-37409406864c/add HTTP/1.1" 201
+[36mDEBUG[0m:    [14-10-2024 19:59:44] Collection nicknames already exists, returning existing collection.
+[32mINFO[0m:     [14-10-2024 19:59:44] ::1:52124 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[33mWARNING[0m:  [14-10-2024 19:59:44] Insert of existing embedding ID: SINISTRO•gdq
+[33mWARNING[0m:  [14-10-2024 19:59:44] Insert of existing embedding ID: COVEIRO•gdq
+[33mWARNING[0m:  [14-10-2024 19:59:44] Insert of existing embedding ID: VIPER•gdq
+[33mWARNING[0m:  [14-10-2024 19:59:44] Insert of existing embedding ID: AMINHAER•gdq
+[33mWARNING[0m:  [14-10-2024 19:59:44] Add of existing embedding ID: SINISTRO•gdq
+[33mWARNING[0m:  [14-10-2024 19:59:44] Add of existing embedding ID: COVEIRO•gdq
+[33mWARNING[0m:  [14-10-2024 19:59:44] Add of existing embedding ID: VIPER•gdq
+[33mWARNING[0m:  [14-10-2024 19:59:44] Add of existing embedding ID: AMINHAER•gdq
+[32mINFO[0m:     [14-10-2024 19:59:44] ::1:52124 - "POST /api/v1/collections/8dde2862-2f7d-40d8-807e-37409406864c/add HTTP/1.1" 201
+[36mDEBUG[0m:    [14-10-2024 19:59:54] Collection nicknames already exists, returning existing collection.
+[32mINFO[0m:     [14-10-2024 19:59:54] ::1:52124 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[36mDEBUG[0m:    [14-10-2024 19:59:54] Collection nicknames already exists, returning existing collection.
+[32mINFO[0m:     [14-10-2024 19:59:54] ::1:52124 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[33mWARNING[0m:  [14-10-2024 19:59:54] Insert of existing embedding ID: SINISTRO•gdq
+[33mWARNING[0m:  [14-10-2024 19:59:54] Insert of existing embedding ID: COVEIRO•gdq
+[33mWARNING[0m:  [14-10-2024 19:59:54] Insert of existing embedding ID: VIPER•gdq
+[33mWARNING[0m:  [14-10-2024 19:59:54] Insert of existing embedding ID: AMINHAER•gdq
+[33mWARNING[0m:  [14-10-2024 19:59:54] Add of existing embedding ID: SINISTRO•gdq
+[33mWARNING[0m:  [14-10-2024 19:59:54] Add of existing embedding ID: COVEIRO•gdq
+[33mWARNING[0m:  [14-10-2024 19:59:54] Add of existing embedding ID: VIPER•gdq
+[33mWARNING[0m:  [14-10-2024 19:59:54] Add of existing embedding ID: AMINHAER•gdq
+[32mINFO[0m:     [14-10-2024 19:59:54] ::1:52124 - "POST /api/v1/collections/8dde2862-2f7d-40d8-807e-37409406864c/add HTTP/1.1" 201
+[32mINFO[0m:     [14-10-2024 19:59:54] ::1:52176 - "POST /api/v1/collections/8dde2862-2f7d-40d8-807e-37409406864c/query HTTP/1.1" 200
+[32mINFO[0m:     [14-10-2024 20:00:20] ::1:52201 - "GET /api/v1/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [14-10-2024 20:00:20] ::1:52201 - "GET /api/v1/databases/default_database?tenant=default_tenant HTTP/1.1" 200
+[36mDEBUG[0m:    [14-10-2024 20:00:20] Collection nicknames already exists, returning existing collection.
+[32mINFO[0m:     [14-10-2024 20:00:20] ::1:52201 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[33mWARNING[0m:  [14-10-2024 20:00:21] Insert of existing embedding ID: AMINHAER•gdq
+[33mWARNING[0m:  [14-10-2024 20:00:21] Insert of existing embedding ID: COVEIRO•gdq
+[33mWARNING[0m:  [14-10-2024 20:00:21] Add of existing embedding ID: AMINHAER•gdq
+[33mWARNING[0m:  [14-10-2024 20:00:21] Add of existing embedding ID: COVEIRO•gdq
+[32mINFO[0m:     [14-10-2024 20:00:21] ::1:52201 - "POST /api/v1/collections/8dde2862-2f7d-40d8-807e-37409406864c/add HTTP/1.1" 201
+[36mDEBUG[0m:    [14-10-2024 20:00:24] Collection nicknames already exists, returning existing collection.
+[32mINFO[0m:     [14-10-2024 20:00:24] ::1:52201 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[33mWARNING[0m:  [14-10-2024 20:00:24] Insert of existing embedding ID: AMINHAER•gdq
+[33mWARNING[0m:  [14-10-2024 20:00:24] Insert of existing embedding ID: COVEIRO•gdq
+[33mWARNING[0m:  [14-10-2024 20:00:24] Add of existing embedding ID: AMINHAER•gdq
+[33mWARNING[0m:  [14-10-2024 20:00:24] Add of existing embedding ID: COVEIRO•gdq
+[32mINFO[0m:     [14-10-2024 20:00:24] ::1:52201 - "POST /api/v1/collections/8dde2862-2f7d-40d8-807e-37409406864c/add HTTP/1.1" 201
+[36mDEBUG[0m:    [14-10-2024 20:00:27] Collection nicknames already exists, returning existing collection.
+[32mINFO[0m:     [14-10-2024 20:00:27] ::1:52201 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[32mINFO[0m:     [14-10-2024 20:00:41] ::1:52211 - "GET /api/v1/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [14-10-2024 20:00:41] ::1:52211 - "GET /api/v1/databases/default_database?tenant=default_tenant HTTP/1.1" 200
+[36mDEBUG[0m:    [14-10-2024 20:00:41] Collection nicknames already exists, returning existing collection.
+[32mINFO[0m:     [14-10-2024 20:00:41] ::1:52211 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[33mWARNING[0m:  [14-10-2024 20:00:41] Insert of existing embedding ID: AMINHAER•gdq
+[33mWARNING[0m:  [14-10-2024 20:00:41] Insert of existing embedding ID: COVEIRO•gdq
+[33mWARNING[0m:  [14-10-2024 20:00:41] Add of existing embedding ID: AMINHAER•gdq
+[33mWARNING[0m:  [14-10-2024 20:00:41] Add of existing embedding ID: COVEIRO•gdq
+[32mINFO[0m:     [14-10-2024 20:00:41] ::1:52211 - "POST /api/v1/collections/8dde2862-2f7d-40d8-807e-37409406864c/add HTTP/1.1" 201
+[32mINFO[0m:     [14-10-2024 20:02:17] ::1:52235 - "GET /api/v1/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [14-10-2024 20:02:18] ::1:52235 - "GET /api/v1/databases/default_database?tenant=default_tenant HTTP/1.1" 200
+[36mDEBUG[0m:    [14-10-2024 20:02:18] Collection nicknames already exists, returning existing collection.
+[32mINFO[0m:     [14-10-2024 20:02:18] ::1:52235 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[32mINFO[0m:     [14-10-2024 20:02:18] ::1:52235 - "POST /api/v1/collections/8dde2862-2f7d-40d8-807e-37409406864c/add HTTP/1.1" 201
+[32mINFO[0m:     [14-10-2024 20:07:32] ::1:52347 - "GET /api/v1/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [14-10-2024 20:07:32] ::1:52347 - "GET /api/v1/databases/default_database?tenant=default_tenant HTTP/1.1" 200
+[36mDEBUG[0m:    [14-10-2024 20:07:32] Collection nicknames already exists, returning existing collection.
+[32mINFO[0m:     [14-10-2024 20:07:32] ::1:52347 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[32mINFO[0m:     [14-10-2024 20:07:32] ::1:52347 - "POST /api/v1/collections/8dde2862-2f7d-40d8-807e-37409406864c/add HTTP/1.1" 201
