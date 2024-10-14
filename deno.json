@@ -1,7 +1,8 @@
 {
   "tasks": {
-    "dev": "deno run --watch -NRW --allow-run main.ts"
+    "dev": "deno run --watch -NRW --allow-env --allow-ffi --allow-run main.ts"
   },
+  "nodeModulesDir": "auto",
   "imports": {
     "@std/assert": "jsr:@std/assert@1"
   }

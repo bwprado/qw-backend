@@ -1,3 +1,19 @@
+export interface ParsedMatch {
+  version: number
+  date: string
+  map: string
+  hostname: string
+  ip: string
+  port: number
+  mode: string
+  tl: number
+  dm: number
+  tp: number
+  duration: number
+  demo: string
+  teams: string[]
+  players: Player[]
+}
 export interface Match {
   version: number
   date: string
