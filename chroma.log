@@ -1607,3 +1607,16 @@ chromadb.db.base.UniqueConstraintError: Collection nicknames already exists
 [33mWARNING[0m:  [14-10-2024 20:23:51] Add of existing embedding ID: aminhaer•gdq
 [33mWARNING[0m:  [14-10-2024 20:23:51] Add of existing embedding ID: coveiro•gdq
 [32mINFO[0m:     [14-10-2024 20:23:51] ::1:52827 - "POST /api/v1/collections/8dde2862-2f7d-40d8-807e-37409406864c/add HTTP/1.1" 201
+[32mINFO[0m:     [14-10-2024 20:26:41] Shutting down
+[32mINFO[0m:     [14-10-2024 20:26:41] Waiting for application shutdown.
+[36mDEBUG[0m:    [14-10-2024 20:26:41] Stopping component System
+[36mDEBUG[0m:    [14-10-2024 20:26:41] Stopping component SegmentAPI
+[36mDEBUG[0m:    [14-10-2024 20:26:41] Stopping component PersistentLocalHnswSegment
+[36mDEBUG[0m:    [14-10-2024 20:26:41] Stopping component LocalSegmentManager
+[36mDEBUG[0m:    [14-10-2024 20:26:41] Stopping component SimpleRateLimitEnforcer
+[36mDEBUG[0m:    [14-10-2024 20:26:41] Stopping component Posthog
+[36mDEBUG[0m:    [14-10-2024 20:26:41] Stopping component QuotaEnforcer
+[36mDEBUG[0m:    [14-10-2024 20:26:41] Stopping component SqliteDB
+[36mDEBUG[0m:    [14-10-2024 20:26:41] Stopping component OpenTelemetryClient
+[32mINFO[0m:     [14-10-2024 20:26:41] Application shutdown complete.
+[32mINFO[0m:     [14-10-2024 20:26:41] Finished server process [[36m21376[0m]
