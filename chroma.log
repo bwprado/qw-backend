@@ -1411,3 +1411,199 @@ chromadb.db.base.UniqueConstraintError: Collection nicknames already exists
 [36mDEBUG[0m:    [14-10-2024 20:07:32] Collection nicknames already exists, returning existing collection.
 [32mINFO[0m:     [14-10-2024 20:07:32] ::1:52347 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
 [32mINFO[0m:     [14-10-2024 20:07:32] ::1:52347 - "POST /api/v1/collections/8dde2862-2f7d-40d8-807e-37409406864c/add HTTP/1.1" 201
+[32mINFO[0m:     [14-10-2024 20:19:00] ::1:52725 - "GET /api/v1/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [14-10-2024 20:19:00] ::1:52725 - "GET /api/v1/databases/default_database?tenant=default_tenant HTTP/1.1" 200
+[36mDEBUG[0m:    [14-10-2024 20:19:00] Collection nicknames already exists, returning existing collection.
+[32mINFO[0m:     [14-10-2024 20:19:00] ::1:52725 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[32mINFO[0m:     [14-10-2024 20:19:00] ::1:52725 - "POST /api/v1/collections/8dde2862-2f7d-40d8-807e-37409406864c/add HTTP/1.1" 201
+[36mDEBUG[0m:    [14-10-2024 20:19:04] Collection nicknames already exists, returning existing collection.
+[32mINFO[0m:     [14-10-2024 20:19:04] ::1:52725 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[33mWARNING[0m:  [14-10-2024 20:19:04] Insert of existing embedding ID: aminhaer•gdq
+[33mWARNING[0m:  [14-10-2024 20:19:04] Insert of existing embedding ID: coveiro•gdq
+[33mWARNING[0m:  [14-10-2024 20:19:04] Add of existing embedding ID: aminhaer•gdq
+[33mWARNING[0m:  [14-10-2024 20:19:04] Add of existing embedding ID: coveiro•gdq
+[32mINFO[0m:     [14-10-2024 20:19:04] ::1:52725 - "POST /api/v1/collections/8dde2862-2f7d-40d8-807e-37409406864c/add HTTP/1.1" 201
+[36mDEBUG[0m:    [14-10-2024 20:19:07] Collection nicknames already exists, returning existing collection.
+[32mINFO[0m:     [14-10-2024 20:19:07] ::1:52725 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[33mWARNING[0m:  [14-10-2024 20:19:07] Insert of existing embedding ID: aminhaer•gdq
+[33mWARNING[0m:  [14-10-2024 20:19:07] Insert of existing embedding ID: coveiro•gdq
+[33mWARNING[0m:  [14-10-2024 20:19:07] Add of existing embedding ID: aminhaer•gdq
+[33mWARNING[0m:  [14-10-2024 20:19:07] Add of existing embedding ID: coveiro•gdq
+[32mINFO[0m:     [14-10-2024 20:19:07] ::1:52725 - "POST /api/v1/collections/8dde2862-2f7d-40d8-807e-37409406864c/add HTTP/1.1" 201
+[36mDEBUG[0m:    [14-10-2024 20:19:11] Collection nicknames already exists, returning existing collection.
+[32mINFO[0m:     [14-10-2024 20:19:11] ::1:52725 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[33mWARNING[0m:  [14-10-2024 20:19:11] Insert of existing embedding ID: aminhaer•gdq
+[33mWARNING[0m:  [14-10-2024 20:19:11] Insert of existing embedding ID: coveiro•gdq
+[33mWARNING[0m:  [14-10-2024 20:19:11] Add of existing embedding ID: aminhaer•gdq
+[33mWARNING[0m:  [14-10-2024 20:19:11] Add of existing embedding ID: coveiro•gdq
+[32mINFO[0m:     [14-10-2024 20:19:11] ::1:52725 - "POST /api/v1/collections/8dde2862-2f7d-40d8-807e-37409406864c/add HTTP/1.1" 201
+[36mDEBUG[0m:    [14-10-2024 20:19:14] Collection nicknames already exists, returning existing collection.
+[32mINFO[0m:     [14-10-2024 20:19:14] ::1:52725 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[33mWARNING[0m:  [14-10-2024 20:19:14] Insert of existing embedding ID: aminhaer•gdq
+[33mWARNING[0m:  [14-10-2024 20:19:14] Insert of existing embedding ID: coveiro•gdq
+[33mWARNING[0m:  [14-10-2024 20:19:14] Add of existing embedding ID: aminhaer•gdq
+[33mWARNING[0m:  [14-10-2024 20:19:14] Add of existing embedding ID: coveiro•gdq
+[32mINFO[0m:     [14-10-2024 20:19:14] ::1:52725 - "POST /api/v1/collections/8dde2862-2f7d-40d8-807e-37409406864c/add HTTP/1.1" 201
+[36mDEBUG[0m:    [14-10-2024 20:19:17] Collection nicknames already exists, returning existing collection.
+[32mINFO[0m:     [14-10-2024 20:19:17] ::1:52725 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[33mWARNING[0m:  [14-10-2024 20:19:17] Insert of existing embedding ID: aminhaer•gdq
+[33mWARNING[0m:  [14-10-2024 20:19:17] Insert of existing embedding ID: coveiro•gdq
+[33mWARNING[0m:  [14-10-2024 20:19:17] Add of existing embedding ID: aminhaer•gdq
+[33mWARNING[0m:  [14-10-2024 20:19:17] Add of existing embedding ID: coveiro•gdq
+[32mINFO[0m:     [14-10-2024 20:19:17] ::1:52725 - "POST /api/v1/collections/8dde2862-2f7d-40d8-807e-37409406864c/add HTTP/1.1" 201
+[36mDEBUG[0m:    [14-10-2024 20:19:19] Collection nicknames already exists, returning existing collection.
+[32mINFO[0m:     [14-10-2024 20:19:19] ::1:52725 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[33mWARNING[0m:  [14-10-2024 20:19:19] Insert of existing embedding ID: aminhaer•gdq
+[33mWARNING[0m:  [14-10-2024 20:19:19] Insert of existing embedding ID: coveiro•gdq
+[33mWARNING[0m:  [14-10-2024 20:19:19] Add of existing embedding ID: aminhaer•gdq
+[33mWARNING[0m:  [14-10-2024 20:19:19] Add of existing embedding ID: coveiro•gdq
+[32mINFO[0m:     [14-10-2024 20:19:19] ::1:52725 - "POST /api/v1/collections/8dde2862-2f7d-40d8-807e-37409406864c/add HTTP/1.1" 201
+[36mDEBUG[0m:    [14-10-2024 20:19:27] Collection nicknames already exists, returning existing collection.
+[32mINFO[0m:     [14-10-2024 20:19:27] ::1:52725 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[33mWARNING[0m:  [14-10-2024 20:19:27] Insert of existing embedding ID: coveiro•gdq
+[33mWARNING[0m:  [14-10-2024 20:19:27] Insert of existing embedding ID: aminhaer•gdq
+[33mWARNING[0m:  [14-10-2024 20:19:27] Add of existing embedding ID: coveiro•gdq
+[33mWARNING[0m:  [14-10-2024 20:19:27] Add of existing embedding ID: aminhaer•gdq
+[32mINFO[0m:     [14-10-2024 20:19:27] ::1:52725 - "POST /api/v1/collections/8dde2862-2f7d-40d8-807e-37409406864c/add HTTP/1.1" 201
+[36mDEBUG[0m:    [14-10-2024 20:19:33] Collection nicknames already exists, returning existing collection.
+[32mINFO[0m:     [14-10-2024 20:19:33] ::1:52725 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[33mWARNING[0m:  [14-10-2024 20:19:33] Insert of existing embedding ID: sinistro•gdq
+[33mWARNING[0m:  [14-10-2024 20:19:33] Insert of existing embedding ID: coveiro•gdq
+[33mWARNING[0m:  [14-10-2024 20:19:33] Insert of existing embedding ID: viper•gdq
+[33mWARNING[0m:  [14-10-2024 20:19:33] Insert of existing embedding ID: aminhaer•gdq
+[33mWARNING[0m:  [14-10-2024 20:19:33] Add of existing embedding ID: sinistro•gdq
+[33mWARNING[0m:  [14-10-2024 20:19:33] Add of existing embedding ID: coveiro•gdq
+[33mWARNING[0m:  [14-10-2024 20:19:33] Add of existing embedding ID: viper•gdq
+[33mWARNING[0m:  [14-10-2024 20:19:33] Add of existing embedding ID: aminhaer•gdq
+[32mINFO[0m:     [14-10-2024 20:19:33] ::1:52725 - "POST /api/v1/collections/8dde2862-2f7d-40d8-807e-37409406864c/add HTTP/1.1" 201
+[36mDEBUG[0m:    [14-10-2024 20:19:39] Collection nicknames already exists, returning existing collection.
+[32mINFO[0m:     [14-10-2024 20:19:39] ::1:52725 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[36mDEBUG[0m:    [14-10-2024 20:19:39] Collection nicknames already exists, returning existing collection.
+[32mINFO[0m:     [14-10-2024 20:19:39] ::1:52725 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[33mWARNING[0m:  [14-10-2024 20:19:39] Insert of existing embedding ID: sinistro•gdq
+[33mWARNING[0m:  [14-10-2024 20:19:39] Insert of existing embedding ID: coveiro•gdq
+[33mWARNING[0m:  [14-10-2024 20:19:39] Insert of existing embedding ID: viper•gdq
+[33mWARNING[0m:  [14-10-2024 20:19:39] Insert of existing embedding ID: aminhaer•gdq
+[33mWARNING[0m:  [14-10-2024 20:19:39] Add of existing embedding ID: sinistro•gdq
+[33mWARNING[0m:  [14-10-2024 20:19:39] Add of existing embedding ID: coveiro•gdq
+[33mWARNING[0m:  [14-10-2024 20:19:39] Add of existing embedding ID: viper•gdq
+[33mWARNING[0m:  [14-10-2024 20:19:39] Add of existing embedding ID: aminhaer•gdq
+[32mINFO[0m:     [14-10-2024 20:19:39] ::1:52725 - "POST /api/v1/collections/8dde2862-2f7d-40d8-807e-37409406864c/add HTTP/1.1" 201
+[32mINFO[0m:     [14-10-2024 20:19:39] ::1:52725 - "POST /api/v1/collections/8dde2862-2f7d-40d8-807e-37409406864c/query HTTP/1.1" 200
+[32mINFO[0m:     [14-10-2024 20:22:41] ::1:52799 - "GET /api/v1/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [14-10-2024 20:22:41] ::1:52799 - "GET /api/v1/databases/default_database?tenant=default_tenant HTTP/1.1" 200
+[36mDEBUG[0m:    [14-10-2024 20:22:41] Collection nicknames already exists, returning existing collection.
+[32mINFO[0m:     [14-10-2024 20:22:41] ::1:52799 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[33mWARNING[0m:  [14-10-2024 20:22:41] Insert of existing embedding ID: aminhaer•gdq
+[33mWARNING[0m:  [14-10-2024 20:22:41] Insert of existing embedding ID: coveiro•gdq
+[33mWARNING[0m:  [14-10-2024 20:22:41] Add of existing embedding ID: aminhaer•gdq
+[33mWARNING[0m:  [14-10-2024 20:22:41] Add of existing embedding ID: coveiro•gdq
+[32mINFO[0m:     [14-10-2024 20:22:41] ::1:52799 - "POST /api/v1/collections/8dde2862-2f7d-40d8-807e-37409406864c/add HTTP/1.1" 201
+[36mDEBUG[0m:    [14-10-2024 20:22:44] Collection nicknames already exists, returning existing collection.
+[32mINFO[0m:     [14-10-2024 20:22:44] ::1:52799 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[33mWARNING[0m:  [14-10-2024 20:22:45] Insert of existing embedding ID: aminhaer•gdq
+[33mWARNING[0m:  [14-10-2024 20:22:45] Insert of existing embedding ID: coveiro•gdq
+[33mWARNING[0m:  [14-10-2024 20:22:45] Add of existing embedding ID: aminhaer•gdq
+[33mWARNING[0m:  [14-10-2024 20:22:45] Add of existing embedding ID: coveiro•gdq
+[32mINFO[0m:     [14-10-2024 20:22:45] ::1:52799 - "POST /api/v1/collections/8dde2862-2f7d-40d8-807e-37409406864c/add HTTP/1.1" 201
+[36mDEBUG[0m:    [14-10-2024 20:22:48] Collection nicknames already exists, returning existing collection.
+[32mINFO[0m:     [14-10-2024 20:22:48] ::1:52799 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[33mWARNING[0m:  [14-10-2024 20:22:48] Insert of existing embedding ID: aminhaer•gdq
+[33mWARNING[0m:  [14-10-2024 20:22:48] Insert of existing embedding ID: coveiro•gdq
+[33mWARNING[0m:  [14-10-2024 20:22:48] Add of existing embedding ID: aminhaer•gdq
+[33mWARNING[0m:  [14-10-2024 20:22:48] Add of existing embedding ID: coveiro•gdq
+[32mINFO[0m:     [14-10-2024 20:22:48] ::1:52799 - "POST /api/v1/collections/8dde2862-2f7d-40d8-807e-37409406864c/add HTTP/1.1" 201
+[36mDEBUG[0m:    [14-10-2024 20:22:51] Collection nicknames already exists, returning existing collection.
+[32mINFO[0m:     [14-10-2024 20:22:51] ::1:52799 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[33mWARNING[0m:  [14-10-2024 20:22:52] Insert of existing embedding ID: aminhaer•gdq
+[33mWARNING[0m:  [14-10-2024 20:22:52] Insert of existing embedding ID: coveiro•gdq
+[33mWARNING[0m:  [14-10-2024 20:22:52] Add of existing embedding ID: aminhaer•gdq
+[33mWARNING[0m:  [14-10-2024 20:22:52] Add of existing embedding ID: coveiro•gdq
+[32mINFO[0m:     [14-10-2024 20:22:52] ::1:52799 - "POST /api/v1/collections/8dde2862-2f7d-40d8-807e-37409406864c/add HTTP/1.1" 201
+[36mDEBUG[0m:    [14-10-2024 20:22:55] Collection nicknames already exists, returning existing collection.
+[32mINFO[0m:     [14-10-2024 20:22:55] ::1:52799 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[33mWARNING[0m:  [14-10-2024 20:22:55] Insert of existing embedding ID: aminhaer•gdq
+[33mWARNING[0m:  [14-10-2024 20:22:55] Insert of existing embedding ID: coveiro•gdq
+[33mWARNING[0m:  [14-10-2024 20:22:55] Add of existing embedding ID: aminhaer•gdq
+[33mWARNING[0m:  [14-10-2024 20:22:55] Add of existing embedding ID: coveiro•gdq
+[32mINFO[0m:     [14-10-2024 20:22:55] ::1:52799 - "POST /api/v1/collections/8dde2862-2f7d-40d8-807e-37409406864c/add HTTP/1.1" 201
+[36mDEBUG[0m:    [14-10-2024 20:23:06] Collection nicknames already exists, returning existing collection.
+[32mINFO[0m:     [14-10-2024 20:23:06] ::1:52799 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[33mWARNING[0m:  [14-10-2024 20:23:06] Insert of existing embedding ID: aminhaer•gdq
+[33mWARNING[0m:  [14-10-2024 20:23:06] Insert of existing embedding ID: coveiro•gdq
+[33mWARNING[0m:  [14-10-2024 20:23:06] Add of existing embedding ID: aminhaer•gdq
+[33mWARNING[0m:  [14-10-2024 20:23:06] Add of existing embedding ID: coveiro•gdq
+[32mINFO[0m:     [14-10-2024 20:23:06] ::1:52799 - "POST /api/v1/collections/8dde2862-2f7d-40d8-807e-37409406864c/add HTTP/1.1" 201
+[36mDEBUG[0m:    [14-10-2024 20:23:07] Collection nicknames already exists, returning existing collection.
+[32mINFO[0m:     [14-10-2024 20:23:07] ::1:52799 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[33mWARNING[0m:  [14-10-2024 20:23:07] Insert of existing embedding ID: aminhaer•gdq
+[33mWARNING[0m:  [14-10-2024 20:23:07] Insert of existing embedding ID: coveiro•gdq
+[33mWARNING[0m:  [14-10-2024 20:23:07] Add of existing embedding ID: aminhaer•gdq
+[33mWARNING[0m:  [14-10-2024 20:23:07] Add of existing embedding ID: coveiro•gdq
+[32mINFO[0m:     [14-10-2024 20:23:07] ::1:52799 - "POST /api/v1/collections/8dde2862-2f7d-40d8-807e-37409406864c/add HTTP/1.1" 201
+[36mDEBUG[0m:    [14-10-2024 20:23:15] Collection nicknames already exists, returning existing collection.
+[32mINFO[0m:     [14-10-2024 20:23:15] ::1:52799 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[33mWARNING[0m:  [14-10-2024 20:23:15] Insert of existing embedding ID: sinistro•gdq
+[33mWARNING[0m:  [14-10-2024 20:23:15] Insert of existing embedding ID: coveiro•gdq
+[33mWARNING[0m:  [14-10-2024 20:23:15] Insert of existing embedding ID: viper•gdq
+[33mWARNING[0m:  [14-10-2024 20:23:15] Insert of existing embedding ID: aminhaer•gdq
+[33mWARNING[0m:  [14-10-2024 20:23:15] Add of existing embedding ID: sinistro•gdq
+[33mWARNING[0m:  [14-10-2024 20:23:15] Add of existing embedding ID: coveiro•gdq
+[33mWARNING[0m:  [14-10-2024 20:23:15] Add of existing embedding ID: viper•gdq
+[33mWARNING[0m:  [14-10-2024 20:23:15] Add of existing embedding ID: aminhaer•gdq
+[32mINFO[0m:     [14-10-2024 20:23:15] ::1:52799 - "POST /api/v1/collections/8dde2862-2f7d-40d8-807e-37409406864c/add HTTP/1.1" 201
+[36mDEBUG[0m:    [14-10-2024 20:23:21] Collection nicknames already exists, returning existing collection.
+[32mINFO[0m:     [14-10-2024 20:23:21] ::1:52799 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[33mWARNING[0m:  [14-10-2024 20:23:21] Insert of existing embedding ID: sinistro•gdq
+[33mWARNING[0m:  [14-10-2024 20:23:21] Insert of existing embedding ID: coveiro•gdq
+[33mWARNING[0m:  [14-10-2024 20:23:21] Insert of existing embedding ID: viper•gdq
+[33mWARNING[0m:  [14-10-2024 20:23:21] Insert of existing embedding ID: aminhaer•gdq
+[33mWARNING[0m:  [14-10-2024 20:23:21] Add of existing embedding ID: sinistro•gdq
+[33mWARNING[0m:  [14-10-2024 20:23:21] Add of existing embedding ID: coveiro•gdq
+[33mWARNING[0m:  [14-10-2024 20:23:21] Add of existing embedding ID: viper•gdq
+[33mWARNING[0m:  [14-10-2024 20:23:21] Add of existing embedding ID: aminhaer•gdq
+[32mINFO[0m:     [14-10-2024 20:23:21] ::1:52799 - "POST /api/v1/collections/8dde2862-2f7d-40d8-807e-37409406864c/add HTTP/1.1" 201
+[32mINFO[0m:     [14-10-2024 20:23:34] ::1:52827 - "GET /api/v1/tenants/default_tenant HTTP/1.1" 200
+[32mINFO[0m:     [14-10-2024 20:23:34] ::1:52827 - "GET /api/v1/databases/default_database?tenant=default_tenant HTTP/1.1" 200
+[36mDEBUG[0m:    [14-10-2024 20:23:34] Collection nicknames already exists, returning existing collection.
+[32mINFO[0m:     [14-10-2024 20:23:34] ::1:52827 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[33mWARNING[0m:  [14-10-2024 20:23:34] Insert of existing embedding ID: aminhaer•gdq
+[33mWARNING[0m:  [14-10-2024 20:23:34] Insert of existing embedding ID: coveiro•gdq
+[33mWARNING[0m:  [14-10-2024 20:23:34] Add of existing embedding ID: aminhaer•gdq
+[33mWARNING[0m:  [14-10-2024 20:23:34] Add of existing embedding ID: coveiro•gdq
+[32mINFO[0m:     [14-10-2024 20:23:34] ::1:52827 - "POST /api/v1/collections/8dde2862-2f7d-40d8-807e-37409406864c/add HTTP/1.1" 201
+[36mDEBUG[0m:    [14-10-2024 20:23:38] Collection nicknames already exists, returning existing collection.
+[32mINFO[0m:     [14-10-2024 20:23:38] ::1:52827 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[33mWARNING[0m:  [14-10-2024 20:23:38] Insert of existing embedding ID: aminhaer•gdq
+[33mWARNING[0m:  [14-10-2024 20:23:38] Insert of existing embedding ID: coveiro•gdq
+[33mWARNING[0m:  [14-10-2024 20:23:38] Add of existing embedding ID: aminhaer•gdq
+[33mWARNING[0m:  [14-10-2024 20:23:38] Add of existing embedding ID: coveiro•gdq
+[32mINFO[0m:     [14-10-2024 20:23:38] ::1:52827 - "POST /api/v1/collections/8dde2862-2f7d-40d8-807e-37409406864c/add HTTP/1.1" 201
+[36mDEBUG[0m:    [14-10-2024 20:23:41] Collection nicknames already exists, returning existing collection.
+[32mINFO[0m:     [14-10-2024 20:23:41] ::1:52827 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[33mWARNING[0m:  [14-10-2024 20:23:41] Insert of existing embedding ID: aminhaer•gdq
+[33mWARNING[0m:  [14-10-2024 20:23:41] Insert of existing embedding ID: coveiro•gdq
+[33mWARNING[0m:  [14-10-2024 20:23:41] Add of existing embedding ID: aminhaer•gdq
+[33mWARNING[0m:  [14-10-2024 20:23:41] Add of existing embedding ID: coveiro•gdq
+[32mINFO[0m:     [14-10-2024 20:23:41] ::1:52827 - "POST /api/v1/collections/8dde2862-2f7d-40d8-807e-37409406864c/add HTTP/1.1" 201
+[36mDEBUG[0m:    [14-10-2024 20:23:44] Collection nicknames already exists, returning existing collection.
+[32mINFO[0m:     [14-10-2024 20:23:44] ::1:52827 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[33mWARNING[0m:  [14-10-2024 20:23:44] Insert of existing embedding ID: aminhaer•gdq
+[33mWARNING[0m:  [14-10-2024 20:23:44] Insert of existing embedding ID: coveiro•gdq
+[33mWARNING[0m:  [14-10-2024 20:23:44] Add of existing embedding ID: aminhaer•gdq
+[33mWARNING[0m:  [14-10-2024 20:23:44] Add of existing embedding ID: coveiro•gdq
+[32mINFO[0m:     [14-10-2024 20:23:44] ::1:52827 - "POST /api/v1/collections/8dde2862-2f7d-40d8-807e-37409406864c/add HTTP/1.1" 201
+[36mDEBUG[0m:    [14-10-2024 20:23:47] Collection nicknames already exists, returning existing collection.
+[32mINFO[0m:     [14-10-2024 20:23:47] ::1:52827 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[33mWARNING[0m:  [14-10-2024 20:23:47] Insert of existing embedding ID: aminhaer•gdq
+[33mWARNING[0m:  [14-10-2024 20:23:47] Insert of existing embedding ID: coveiro•gdq
+[33mWARNING[0m:  [14-10-2024 20:23:47] Add of existing embedding ID: aminhaer•gdq
+[33mWARNING[0m:  [14-10-2024 20:23:47] Add of existing embedding ID: coveiro•gdq
+[32mINFO[0m:     [14-10-2024 20:23:47] ::1:52827 - "POST /api/v1/collections/8dde2862-2f7d-40d8-807e-37409406864c/add HTTP/1.1" 201
+[36mDEBUG[0m:    [14-10-2024 20:23:51] Collection nicknames already exists, returning existing collection.
+[32mINFO[0m:     [14-10-2024 20:23:51] ::1:52827 - "POST /api/v1/collections?tenant=default_tenant&database=default_database HTTP/1.1" 200
+[33mWARNING[0m:  [14-10-2024 20:23:51] Insert of existing embedding ID: aminhaer•gdq
+[33mWARNING[0m:  [14-10-2024 20:23:51] Insert of existing embedding ID: coveiro•gdq
+[33mWARNING[0m:  [14-10-2024 20:23:51] Add of existing embedding ID: aminhaer•gdq
+[33mWARNING[0m:  [14-10-2024 20:23:51] Add of existing embedding ID: coveiro•gdq
+[32mINFO[0m:     [14-10-2024 20:23:51] ::1:52827 - "POST /api/v1/collections/8dde2862-2f7d-40d8-807e-37409406864c/add HTTP/1.1" 201
