@@ -1,7 +1,10 @@
+import PocketBase from 'npm:pocketbase'
+
 import type { ParsedMatch } from './types.ts'
 
 import { ChromaClient } from 'npm:chromadb'
 import { replaceUnicodeStrings } from './utils/parsers.ts'
+import { createHash } from 'node:crypto'
 
 const URLS = ['http://quad.quakeworld.com.br:28000']
 const ENDPOINT = {
@@ -143,6 +146,39 @@ async function queryChromaDB(query: string) {
   }
 }
 
+async function addStatsToPocketBase(parsed: ParsedMatch) {
+  const pb = new PocketBase(Deno.env.get('POCKETBASE_URL'))
+
+  const hash = createHash('sha256').update(JSON.stringify(parsed)).digest('hex')
+
+  const hasBot = parsed.players.some((player) => player.bot)
+
+  if (hasBot) {
+    console.log('Bot detected, skipping...')
+    return false
+  }
+
+  if (parsed?.aborted) {
+    console.log('Match aborted, skipping...')
+    return false
+  }
+
+  const doesMatchExist = await pb.collection('matches').getOne(hash)
+
+  if (doesMatchExist) {
+    console.log('Match already exists, skipping...')
+    return false
+  }
+
+  const { players } = parsed
+
+  const nicknames = players.map((player) => player.name)
+
+  const nicknamesList = await pb.collection('nicknames').getFullList({
+    filter: `nickname ~ "${nicknames.join('|')}"`
+  })
+}
+
 export async function main() {
   console.time('demos')
 
@@ -175,6 +211,13 @@ export async function main() {
 
       if (parseError || !parsed) {
         await saveErrorLog(parseError, url)
+        continue
+      }
+
+      const addedStatsToPocketBase = await addStatsToPocketBase(parsed)
+
+      if (!addedStatsToPocketBase) {
+        await saveErrorLog('Failed to add stats to PocketBase', url)
         continue
       }
 

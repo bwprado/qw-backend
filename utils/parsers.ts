@@ -54,15 +54,14 @@ export const replaceParsedStrings = (data: Match) => {
 }
 
 export const replaceUnicodeStrings = (data: Match) => {
-  const { unicode_names, unicode_teams } = data
+  const { unicode_names } = data
   return {
     ...data,
     teams: data.teams.map((team) => data.parsed_teams[team]),
     players: data.players.map((player) => {
       return {
         ...player,
-        name: parseName(unicode_names[player.name]),
-        team: parseName(unicode_teams[player.team])
+        name: parseName(unicode_names[player.name])
       }
     })
   }
