@@ -158,7 +158,7 @@ async function addStatsToPocketBase(parsed: ParsedMatch) {
     return false
   }
 
-  if (parsed?.aborted) {
+  if (parsed?.duration === 0 || parsed?.duration < 180) {
     console.log('Match aborted, skipping...')
     return false
   }
