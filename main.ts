@@ -1,12 +1,10 @@
-import PocketBase from 'npm:pocketbase'
-
 import type { ParsedMatch } from './types.ts'
 
+import { createHash } from 'node:crypto'
 import { ChromaClient } from 'npm:chromadb'
 import { replaceUnicodeStrings } from './utils/parsers.ts'
-import { createHash } from 'node:crypto'
 
-const URLS = ['http://quad.quakeworld.com.br:28000']
+const URLS = ['http://ring.quakeworld.com.br:28000']
 const ENDPOINT = {
   DEMOS_LIST: '/demo_filenames.txt',
   DEMO: '/dl/demos/'
@@ -71,10 +69,17 @@ async function saveDemo(filename: string, demo: Uint8Array) {
   try {
     if (!filename) return { data: null, error: 'No filename provided' }
 
+    // Ensure directory exists
+    const dir = filename.substring(0, filename.lastIndexOf('/'))
+    if (dir) {
+      await Deno.mkdir(dir, { recursive: true })
+    }
+
     console.log(`Saving ${filename}...`)
     const file = Deno.writeFileSync(filename, demo)
     return { data: file, error: null }
-  } catch (_) {
+  } catch (error) {
+    console.error('Failed to save demo', error)
     await saveErrorLog('Failed to save demo', filename)
     return { data: null, error: 'Failed to save demo' }
   }
@@ -102,6 +107,9 @@ async function parseKTXStats(filename: string) {
   const file = await Deno.readTextFile(filename + '.ktxstats.json')
   const data = JSON.parse(file)
   const parsed = replaceUnicodeStrings(data)
+
+  // Ensure stats directory exists
+  await Deno.mkdir('./stats', { recursive: true })
   await Deno.writeTextFile(`./stats/${parsed.demo}.json`, JSON.stringify(parsed, null, 2))
   await Deno.remove(filename + '.ktxstats.json')
 
@@ -146,37 +154,64 @@ async function queryChromaDB(query: string) {
   }
 }
 
-async function addStatsToPocketBase(parsed: ParsedMatch) {
-  const pb = new PocketBase(Deno.env.get('POCKETBASE_URL'))
+async function addStatsToDatabase(parsed: ParsedMatch) {
+  try {
+    const url = 'https://spotted-wildcat-714.convex.cloud'
+    const hash = createHash('sha256').update(JSON.stringify(parsed)).digest('hex')
 
-  const hash = createHash('sha256').update(JSON.stringify(parsed)).digest('hex')
+    const hasBot = parsed.players.some((player) => player.bot)
 
-  const hasBot = parsed.players.some((player) => player.bot)
+    if (hasBot) {
+      console.log('Bot detected, skipping...')
+      return false
+    }
 
-  if (hasBot) {
-    console.log('Bot detected, skipping...')
+    if (parsed?.duration === 0 || parsed?.duration < 180) {
+      console.log('Match aborted, skipping...')
+      return false
+    }
+
+    // Check if match already exists
+    try {
+      const doesMatchExist = await fetch(`${url}/matches?hash=${hash}`)
+      if (doesMatchExist.status === 200) {
+        console.log('Match already exists, skipping...')
+        return false
+      }
+    } catch (error: unknown) {
+      // If record doesn't exist, that's fine - we can proceed
+      if (error && typeof error === 'object' && 'status' in error && error.status !== 404) {
+        throw error
+      }
+    }
+
+    const { players } = parsed
+    const nicknames = players.map((player) => player.name)
+
+    // Get existing nicknames
+    const _nicknamesList = await fetch(`${url}/nicknames?nickname=${nicknames.join('|')}`)
+
+    // Create the match record
+    await fetch(`${url}/matches`, {
+      method: 'POST',
+      body: JSON.stringify({
+        id: hash,
+        demo: parsed.demo,
+        duration: parsed.duration,
+        players: parsed.players,
+        map: parsed.map,
+        date: parsed.date
+      })
+    })
+
+    console.log(`Successfully added match: ${parsed.demo}`)
+    return true
+  } catch (error: unknown) {
+    console.error('PocketBase error:', error)
+    const errorMessage = error instanceof Error ? error.message : String(error)
+    await saveErrorLog(`PocketBase error: ${errorMessage}`, 'addStatsToPocketBase')
     return false
   }
-
-  if (parsed?.duration === 0 || parsed?.duration < 180) {
-    console.log('Match aborted, skipping...')
-    return false
-  }
-
-  const doesMatchExist = await pb.collection('matches').getOne(hash)
-
-  if (doesMatchExist) {
-    console.log('Match already exists, skipping...')
-    return false
-  }
-
-  const { players } = parsed
-
-  const nicknames = players.map((player) => player.name)
-
-  const nicknamesList = await pb.collection('nicknames').getFullList({
-    filter: `nickname ~ "${nicknames.join('|')}"`
-  })
 }
 
 export async function main() {
@@ -198,6 +233,7 @@ export async function main() {
         continue
       }
       const filename = `./demos/stats_${index}`
+      console.log(filename)
 
       const { error: saveError } = await saveDemo(filename + '.mvd', demo)
 
@@ -214,27 +250,15 @@ export async function main() {
         continue
       }
 
-      const addedStatsToPocketBase = await addStatsToPocketBase(parsed)
-
-      if (!addedStatsToPocketBase) {
-        await saveErrorLog('Failed to add stats to PocketBase', url)
-        continue
-      }
-
-      await addToChromaDB(parsed)
+      console.log(parsed)
+      Deno.writeFileSync(
+        `./stats/${parsed.demo}.json`,
+        new TextEncoder().encode(JSON.stringify(parsed, null, 2))
+      )
     }
   }
 
   await client.reset()
-
-  const { data: queryResults, error } = await queryChromaDB('cova')
-
-  if (error) {
-    console.error(error)
-    return
-  }
-
-  console.log(queryResults)
 
   console.timeEnd('demos')
   console.info('Done fetching demos...')
