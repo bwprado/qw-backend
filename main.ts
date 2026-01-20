@@ -1,7 +1,8 @@
 import type { ParsedMatch } from './types.ts'
 
 import { createHash } from 'node:crypto'
-import { ChromaClient } from 'npm:chromadb'
+import { mkdir } from 'node:fs/promises'
+import { ChromaClient } from 'chromadb'
 import { replaceUnicodeStrings } from './utils/parsers.ts'
 
 const URLS = ['http://ring.quakeworld.com.br:28000']
@@ -17,7 +18,11 @@ async function saveErrorLog(error: string, origin: string) {
     const timestamp = new Date().toISOString()
     const logEntry = `${timestamp}: ${error} - ${origin}\n`
     console.error(logEntry)
-    await Deno.writeTextFile('./error.log', logEntry, { append: true })
+    const file = Bun.file('./error.log')
+    const writer = file.writer()
+    writer.write(logEntry)
+    await writer.flush()
+    writer.end()
   } catch (error) {
     console.error('Error saving error log:', error)
   }
@@ -72,12 +77,12 @@ async function saveDemo(filename: string, demo: Uint8Array) {
     // Ensure directory exists
     const dir = filename.substring(0, filename.lastIndexOf('/'))
     if (dir) {
-      await Deno.mkdir(dir, { recursive: true })
+      await mkdir(dir, { recursive: true })
     }
 
     console.log(`Saving ${filename}...`)
-    const file = Deno.writeFileSync(filename, demo)
-    return { data: file, error: null }
+    await Bun.write(filename, demo)
+    return { data: null, error: null }
   } catch (error) {
     console.error('Failed to save demo', error)
     await saveErrorLog('Failed to save demo', filename)
@@ -88,30 +93,27 @@ async function saveDemo(filename: string, demo: Uint8Array) {
 async function executeMvdParser(filename: string) {
   if (!filename) return { data: null, error: 'No filename provided' }
 
-  await new Deno.Command('./mvdparser.exe', {
-    args: [filename]
-  }).output()
+  await Bun.spawn(['./mvdparser.exe', filename], {
+    stdout: 'pipe',
+    stderr: 'pipe'
+  }).exited
 
-  if (
-    await Deno.stat(filename)
-      .then(() => true)
-      .catch(() => false)
-  ) {
-    await Deno.remove(filename)
+  if (await Bun.file(filename).exists()) {
+    await Bun.file(filename).delete()
   }
 }
 
 async function parseKTXStats(filename: string) {
   if (!filename) return { data: null, error: 'No filename provided' }
 
-  const file = await Deno.readTextFile(filename + '.ktxstats.json')
+  const file = await Bun.file(filename + '.ktxstats.json').text()
   const data = JSON.parse(file)
   const parsed = replaceUnicodeStrings(data)
 
   // Ensure stats directory exists
-  await Deno.mkdir('./stats', { recursive: true })
-  await Deno.writeTextFile(`./stats/${parsed.demo}.json`, JSON.stringify(parsed, null, 2))
-  await Deno.remove(filename + '.ktxstats.json')
+  await mkdir('./stats', { recursive: true })
+  await Bun.write(`./stats/${parsed.demo}.json`, JSON.stringify(parsed, null, 2))
+  await Bun.file(filename + '.ktxstats.json').delete()
 
   return { data: parsed, error: null }
 }
@@ -126,12 +128,8 @@ async function addToChromaDB(parsed: ParsedMatch) {
       documents: parsed.players.map((player) => player.name)
     })
 
-    if (
-      await Deno.stat(`./demos/${parsed.demo}.json`)
-        .then(() => true)
-        .catch(() => false)
-    ) {
-      await Deno.remove(`./demos/${parsed.demo}.json`)
+    if (await Bun.file(`./demos/${parsed.demo}.json`).exists()) {
+      await Bun.file(`./demos/${parsed.demo}.json`).delete()
     }
   } catch (error) {
     console.error('ChromaDB error:', error)
@@ -251,10 +249,7 @@ export async function main() {
       }
 
       console.log(parsed)
-      Deno.writeFileSync(
-        `./stats/${parsed.demo}.json`,
-        new TextEncoder().encode(JSON.stringify(parsed, null, 2))
-      )
+      await Bun.write(`./stats/${parsed.demo}.json`, JSON.stringify(parsed, null, 2))
     }
   }
 

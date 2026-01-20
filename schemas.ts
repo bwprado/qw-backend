@@ -1,4 +1,4 @@
-import { z } from 'npm:zod'
+import { z } from 'zod'
 
 // Base schemas for common patterns
 const idSchema = z.string();
